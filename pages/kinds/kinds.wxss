@@ -1,0 +1,4 @@
+/* pages/kinds/kinds.wxss */
+.swiper-item{
+    background:yellow
+}
