@@ -10,7 +10,21 @@ Page({
       {name:"item3",id:3,bgColor:'yellow'},
       {name:"item4",id:4,bgColor:'white'},
     ],
-    userInfo: {}
+    userInfo: {},
+    goodsKindDetails:[
+      {
+        name:"kind1",
+        img:"img1"
+      },
+      {
+        name:"kind2",
+        img:"img2"
+      },
+      {
+        name:"kind3",
+        img:"img3"
+      }
+    ]
   },
   //事件处理函数
   // bindViewTap: function() {
