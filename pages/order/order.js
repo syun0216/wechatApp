@@ -1,0 +1,10 @@
+Page({
+    data:{},
+    TapHandel(e){
+       wx.showToast({
+           title:"成功",
+           icon:"success",
+           duration:1000
+       })
+    }
+})

@@ -7,21 +7,13 @@
     </swiper-item>
   </swiper>
   <view class="weui-flex">
-    <view class="weui-flex__item item-container" wx:for="{{goodsKindDetails}}" wx:key="{{goodsKindDetails.indexOf(item)}}" >
-      <navigator url="../details/details}" >
+    <view class="weui-flex__item item-container" wx:for="{{goodsKindDetails}}" wx:key="{{index}}" >
+      <navigator url="../details/details?goodsName={{item.name}}" >
         <view>{{item.name}}</view>
         <view>{{item.img}}</view>
       </navigator>
     </view>
 
-    <!--<view class="weui-flex__item item-container">
-    <view>kind2</view>
-      <view class="placeholder">img2</view>
-    </view>
-     <view class="weui-flex__item item-container">
-     <view>kind3</view>
-      <view class="placeholder">img3</view>
-    </view>-->
   </view>
 
   <!--<view  bindtap="bindViewTap" class="userinfo">

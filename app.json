@@ -5,6 +5,7 @@
     "pages/kinds/kinds",
     "pages/order/order",
     "pages/me/me",
+    "pages/login/login",
     "pages/details/details"
   ],
   "window":{
@@ -41,6 +42,7 @@
       "selectedIconPath": "selectedIconPath"
     }]
   },
+  "enablePullDownRefresh": true,
   "networkTimeout": {
     "request": 10000,
     "connectSocket": 10000,

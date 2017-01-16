@@ -1,4 +1,18 @@
 /* pages/kinds/kinds.wxss */
-.swiper-item{
-    background:yellow
+.kind-container{
+    display: flex;
+    flex-direction:row;
+    height:100%;
+    border: 1rpx solid #000;
+}
+.list-container{
+    width:25%;
+    flex-direction: column;
+    border-right: 1rpx solid #ddd;
+    background:orange;
+}
+.content-container{
+    flex:1;
+    flex-direction:column;
+    background:green;
 }

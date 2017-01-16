@@ -26,6 +26,13 @@ Page({
       }
     ]
   },
+  onPullDownRefresh(){
+    wx.showToast({
+      title:'正在加载中...'
+    })
+  }
+
+
   //事件处理函数
   // bindViewTap: function() {
   //   wx.navigateTo({
