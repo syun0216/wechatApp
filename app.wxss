@@ -51,6 +51,7 @@ page{
     margin-bottom: 20rpx;
 }
 
-.float-right{
-    float:right;
+
+.marginBottom-50{
+    margin-bottom: 100rpx;
 }

@@ -6,6 +6,7 @@
     "pages/order/order",
     "pages/me/me",
     "pages/login/login",
+    "pages/comment/comment",
     "pages/details/details"
   ],
   "window":{
@@ -21,25 +22,25 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
-      "iconPath": "images/Church.png",
-      "selectedIconPath": "images/Church1.png"
+      "iconPath":"images/lemon.png",
+      "selectedIconPath": "images/lemon.png"
     },{
       "pagePath": "pages/order/order",
       "text": "订单",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "iconPath": "images/carrot.png",
+      "selectedIconPath": "images/carrot.png"
     },
     {
       "pagePath": "pages/kinds/kinds",
       "text": "分类",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "iconPath": "images/pear.png",
+      "selectedIconPath": "images/pear.png"
     },
     {
       "pagePath": "pages/me/me",
       "text": "我的",
-      "iconPath": "iconPath",
-      "selectedIconPath": "selectedIconPath"
+      "iconPath": "images/tree.png",
+      "selectedIconPath": "images/tree.png"
     }]
   },
   "enablePullDownRefresh": true,
