@@ -29,5 +29,4 @@
   height: 200rpx;
   text-align: center;
   border: 3rpx solid #fff;
-
 }

@@ -42,3 +42,15 @@ page{
     text-align: left;
     font-size: 14px;
 }
+
+.marginBottom-10{
+    margin-bottom: 10rpx;
+}
+
+.marginBottom-20{
+    margin-bottom: 20rpx;
+}
+
+.float-right{
+    float:right;
+}

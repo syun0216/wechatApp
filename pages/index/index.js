@@ -11,7 +11,7 @@ Page({
       {name:"item4",id:4,bgColor:'white'},
     ],
     userInfo: {},
-    goodsKindDetails:[
+    goodsKindDetails1:[
       {
         name:"kind1",
         img:"img1"
@@ -23,6 +23,20 @@ Page({
       {
         name:"kind3",
         img:"img3"
+      }
+    ],
+    goodsKindDetails2:[
+      {
+        name:"kind4",
+        img:"img4"
+      },
+      {
+        name:"kind5",
+        img:"img5"
+      },
+      {
+        name:"kind6",
+        img:"img6"
       }
     ]
   },

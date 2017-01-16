@@ -1,6 +1,6 @@
 Page({
     data:{},
-    TapHandel(e){
+    showTopTips(e){
        wx.showToast({
            title:"成功",
            icon:"success",
