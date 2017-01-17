@@ -7,7 +7,7 @@
   <scroll-view class="content-container">
     <block wx:for="{{contentItems}}" wx:key="{{index}}" wx:if="{{curId == item.id}}">
       <view class="weui-grids">
-        <block wx:for="{{item.items}}">
+        <block wx:for="{{item.items}}" wx:key="{{index}}">
           <navigator url="../details/details?goodsName={{item.name}}" class="weui-grid" hover-class="weui-grid_active">
             <view class="weui-grid__label">{{item.name}}</view>
           </navigator>

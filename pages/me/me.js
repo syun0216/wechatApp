@@ -1,8 +1,8 @@
 Page({
     data: {
         userInfo: {},
-        commentTitle:"意见反馈",
-        aboutUs:"关于我们"
+        commentTitle: "意见反馈",
+        aboutUs: "关于我们"
     },
     getMyInfo() {
         let self = this;
@@ -12,6 +12,25 @@ Page({
                 self.setData({
                     userInfo: res.userInfo
                 })
+            }
+        })
+    },
+    saveMyInfo() {
+        wx.setStorage({
+            key: 'userInfo',
+            data: Object / String,
+            success: function (res) {
+                wx.showToast({
+                    title: "保存用户信息成功"
+                })
+            },
+            fail: function () {
+                wx.showToast({
+                    title: "保存用户信息失败"
+                })
+            },
+            complete: function () {
+                // complete
             }
         })
     },
@@ -53,24 +72,39 @@ Page({
         })
     },
     onShareAppMessage() {
-    return {
-      title: '分享本小程序？',
-      desc: '...',
-      path: '/page/index/index'
-    }
-  },
-  logout(){
-      wx.showModal({
-          title:"提示",
-          content:"您确定退出登录吗?",
-          confirmText:"确定",
-          cancelText:"取消",
-          confirmColor:"#ff5858",
-          success:function(res){
-              return null;
-          }
-      })
-  },
+        return {
+            title: '分享本小程序？',
+            desc: '...',
+            path: '/page/index/index'
+        }
+    },
+    logout() {
+        wx.showModal({
+            title: "提示",
+            content: "您确定退出登录吗?",
+            confirmText: "确定",
+            cancelText: "取消",
+            confirmColor: "#ff5858",
+            success: function (res) {
+                wx.clearStorage({
+                    key: 'userInfo',
+                    success: function (res) {
+                        wx.showToast({
+                            title: "退出登录成功"
+                        })
+                    },
+                    fail: function () {
+                        wx.showToast({
+                            title: "退出登录失败"
+                        })
+                    },
+                    complete: function () {
+                        // complete
+                    }
+                })
+            }
+        })
+    },
     onLoad() {
         this.getMyInfo();
     }

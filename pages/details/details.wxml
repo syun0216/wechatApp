@@ -7,7 +7,7 @@
   <view>
     {{goodsName}}
   </view>
-  <view class="bottom-btn">
+  <view class="bottom-btn" bindtap="buying">
     立即购买
   </view>
     
