@@ -1,12 +1,18 @@
-<view class="page">
-    <view class="page__bd">
-        <view class="weui-grids">
-            <block wx:for-items="{{grids}}" wx:key="{{index}}">
-                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
-                    
-                    <view class="weui-grid__label">Grid</view>
-                </navigator>
-            </block>
-        </view>
-    </view>
+<view class="kind-container">
+  <scroll-view class="list-container">
+    <block wx:for="{{listItems}}" wx:key="{{index}}">
+      <view class="listItem {{curId== index ? 'active-listItem' : ''}}" bindtap="switchRightTab" id="{{index}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view class="content-container">
+    <block wx:for="{{contentItems}}" wx:key="{{index}}" wx:if="{{curId == item.id}}">
+      <view class="weui-grids">
+        <block wx:for="{{item.items}}">
+          <navigator url="../details/details?goodsName={{item.name}}" class="weui-grid" hover-class="weui-grid_active">
+            <view class="weui-grid__label">{{item.name}}</view>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
 </view>

@@ -59,6 +59,18 @@ Page({
       path: '/page/index/index'
     }
   },
+  logout(){
+      wx.showModal({
+          title:"提示",
+          content:"您确定退出登录吗?",
+          confirmText:"确定",
+          cancelText:"取消",
+          confirmColor:"#ff5858",
+          success:function(res){
+              return null;
+          }
+      })
+  },
     onLoad() {
         this.getMyInfo();
     }

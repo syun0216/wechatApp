@@ -7,4 +7,8 @@
   <view>
     {{goodsName}}
   </view>
+  <view class="bottom-btn">
+    立即购买
+  </view>
+    
 </view>

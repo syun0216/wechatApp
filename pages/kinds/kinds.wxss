@@ -2,17 +2,32 @@
 .kind-container{
     display: flex;
     flex-direction:row;
-    height:100%;
-    border: 1rpx solid #000;
+    height:100vh;
 }
 .list-container{
     width:25%;
     flex-direction: column;
     border-right: 1rpx solid #ddd;
-    background:orange;
+    background:	#f7f7f7;
 }
 .content-container{
     flex:1;
     flex-direction:column;
-    background:green;
+    background:#fff;
+}
+.listItem{
+    height:50rpx;
+    line-height:50rpx;
+    padding:6px 0;
+    border-bottom: 1px solid gray;
+    font-size:14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-listItem{
+    background:#fff;
+    border-left:4px solid #ff5858;
+    color:#ff5858;
 }
