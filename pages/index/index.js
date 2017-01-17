@@ -4,46 +4,73 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-     swiperData:[
-      {name:"item1",id:1,bgColor:'green'},
-      {name:"item2",id:2,bgColor:'red'},
-      {name:"item3",id:3,bgColor:'yellow'},
-      {name:"item4",id:4,bgColor:'white'},
+    swiperData: [
+      { name: "item1", id: 1, bgColor: 'green' },
+      { name: "item2", id: 2, bgColor: 'red' },
+      { name: "item3", id: 3, bgColor: 'yellow' },
+      { name: "item4", id: 4, bgColor: 'white' },
     ],
     userInfo: {},
-    goodsKindDetails1:[
+    goodsKindDetails1: [
       {
-        name:"kind1",
-        img:"img1"
+        name: "kind1",
+        img: "img1"
       },
       {
-        name:"kind2",
-        img:"img2"
+        name: "kind2",
+        img: "img2"
       },
       {
-        name:"kind3",
-        img:"img3"
+        name: "kind3",
+        img: "img3"
       }
     ],
-    goodsKindDetails2:[
+    goodsKindDetails2: [
       {
-        name:"kind4",
-        img:"img4"
+        name: "kind4",
+        img: "img4"
       },
       {
-        name:"kind5",
-        img:"img5"
+        name: "kind5",
+        img: "img5"
       },
       {
-        name:"kind6",
-        img:"img6"
+        name: "kind6",
+        img: "img6"
       }
-    ]
+    ],
+    longItemList: []
   },
-  onPullDownRefresh(){
+  onPullDownRefresh() {
     wx.showToast({
-      title:'正在加载中...'
+      title: '正在加载中...'
     })
+  },
+  getLocation() {
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })
+  },
+  setLongItemList(){
+    let items = [];
+    for(let i=0;i<=1000;i++){
+      items.push({name:"item"+i})
+    };
+    this.setData({
+      longItemList:items
+    });
+  },
+  onLoad(){
+    this.setLongItemList();
   }
 
 

@@ -30,3 +30,23 @@
   text-align: center;
   border: 3rpx solid #fff;
 }
+.location{
+  position:fixed;
+  top:2%;
+  width:20%;
+  left:40%;
+  height:60rpx;
+  color: #fff;
+  background:rgba(0,0,0,0.3);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.longListItem{
+  width:100%;
+  height:150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid #ccc;
+}
