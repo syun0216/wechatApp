@@ -1,9 +1,9 @@
 
 <!--index.wxml-->
-<scscroll-view scroll-y="true">
+<view>
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
     <swiper-item style="background:{{item.bgColor}}" wx:for="{{swiperData}}" wx:key="{{item.id}}">
-      <image src="{{ item.name}}" mode="scaleToFill"/>
+      <image src="{{ item.name}}" mode="scaleToFill" />
     </swiper-item>
   </swiper>
   <view class="weui-flex">
@@ -22,15 +22,18 @@
       </navigator>
     </view>
   </view>
-<view class="marginBottom-20"/>
-<view class="audio"><audio class="audio" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/></view>
-
-<view class="longListItem">123</view>
-
-  <!--<view  bindtap="bindViewTap" class="userinfo">
+  <view class="marginBottom-20" />
+  <view class="audio">
+    <audio class="audio" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/>
+  </view>
+  <scroll-view scroll-y="true" lower-threshold="50" bindscrolltolower="loadMore">
+    <block wx:for="{{longItemList}}" wx:key="{{index}}">
+      <view class="longListItem">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <!--<view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>-->
-</scscroll-view>
-
+</view>
 <view class="location" bindtap="getLocation">获取位置</view>

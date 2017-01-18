@@ -66,7 +66,7 @@ Page({
   },
   setLongItemList() {
     let items = [];
-    for (let i = 0; i <= 1000; i++) {
+    for (let i = 0; i <= 10; i++) {
       items.push({ name: "item" + i })
     };
     this.setData({
@@ -91,6 +91,12 @@ Page({
   },
   audioStart: function () {
     this.audioCtx.seek(0)
+  },
+  loadMore(){
+    wx.showToast({
+      title:"loading",
+      icon:"loading"
+    })
   }
 
 

@@ -18,7 +18,7 @@ Page({
     saveMyInfo() {
         wx.setStorage({
             key: 'userInfo',
-            data: Object / String,
+            data: this.data.userInfo,
             success: function (res) {
                 wx.showToast({
                     title: "保存用户信息成功"
@@ -32,7 +32,14 @@ Page({
             complete: function () {
                 // complete
             }
+        });
+        wx.getStorage({
+            key: 'userInfo',
+            success: function (res) {
+                console.log(res.data)
+            }
         })
+
     },
     location() {
         wx.getLocation({
