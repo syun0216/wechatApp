@@ -1,7 +1,7 @@
 <view>
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
     <swiper-item style="background:{{item.bgColor}}" wx:for="{{swiperData}}" wx:key="{{index}}">
-      <view>{{item.name}}</view>
+      <image src="{{ item.name}}" mode="scaleToFill"/>
     </swiper-item>
   </swiper>
   <view>
@@ -10,5 +10,4 @@
   <view class="bottom-btn" bindtap="buying">
     立即购买
   </view>
-    
 </view>

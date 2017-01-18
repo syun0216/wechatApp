@@ -92,14 +92,6 @@ Page({
                         wx.showToast({
                             title: "退出登录成功"
                         })
-                    },
-                    fail: function () {
-                        wx.showToast({
-                            title: "退出登录失败"
-                        })
-                    },
-                    complete: function () {
-                        // complete
                     }
                 })
             }
