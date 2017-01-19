@@ -71,17 +71,9 @@ Page({
                         wx.setStorage({
                             key: 'userInfo',
                             data: res.data.data,
-                            success: function (res) {
-                                wx.navigateTo({
-                                  url: '../order/order'
-                                })
-                            },
-                            fail: function () {
-                                // fail
-                            },
-                            complete: function () {
-                                // complete
-                            }
+                        });
+                        wx.navigateBack({
+                          delta: 1, // 回退前 delta(默认为1) 页面
                         })
 
                 }

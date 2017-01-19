@@ -22,5 +22,5 @@
 </view>
 <view class="marginBottom-50"/>
 <view class="weui-btn-area">
-  <button class="weui-btn" type="primary" bindtap="login">确定</button>
+  <button class="weui-btn" type="primary" bindtap="login">立即登录</button>
 </view>

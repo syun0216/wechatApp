@@ -1,4 +1,4 @@
-<view class="order-container">
+<view class="order-container"  wx:if="{{!isLogin}}">
   <view>
     你还没登录
   </view>
@@ -9,4 +9,7 @@
       </view>
     </navigator>
   </view>
+</view>
+<view wx:if="{{isLogin}}" class="order-container">
+ 抱歉，您的订单为空！
 </view>
