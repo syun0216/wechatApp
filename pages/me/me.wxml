@@ -13,10 +13,10 @@
       <view class="weui-cell__bd">获取我的地址</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <navigator url="../login/login" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view bindtap="gotologin" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__bd">绑定手机号</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-    </navigator>
+    </view>
     <navigator url="../comment/comment?title={{commentTitle}}&id=1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__bd">意见反馈</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>

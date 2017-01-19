@@ -9,34 +9,29 @@ Page({
         ],
     },
     buying() {
-        if (wx.getStorage({ key: 'userInfo' }) == undefined) {
-            wx.showToast({
-                title: "您还未登录~",
-                success: function () {
-                    wx.navigateTo({
-                        url: '../login/login',
-                    })
+        let userInfo = null;
+        wx.getStorage({
+            key: 'userInfo',
+            success: function (res) {
+                userInfo = res.data;
+                if (!!userInfo) {
+                   wx.showToast({
+                       title:"正在加载支付，请稍候..."
+                   })
                 }
-            });
-        }
-        else {
-            wx.requestPayment({
-                timeStamp: 'String1',
-                nonceStr: 'String2',
-                package: 'String3',
-                signType: 'MD5',
-                paySign: 'String4',
-                success: function (res) {
-                    // success
-                },
-                fail: function () {
-                    // fail
-                },
-                complete: function () {
-                    // complete
+                else {
+                    wx.showToast({
+                        title: "您还未登录~",
+                        success: function () {
+                            wx.navigateTo({
+                                url: '../login/login',
+                            })
+                        }
+                    });
                 }
-            })
-        }
+            },
+        })
+
     },
     onLoad(params) {
         this.setData({

@@ -24,9 +24,7 @@ Page({
     longItemList: [],
     showLoading: false,
   },
-  onPullDownRefresh() {
-    console.log("下拉刷新")
-  },
+ 
   getLocation() {
     wx.getLocation({
       type: 'gcj02', //返回可以用于wx.openLocation的经纬度
@@ -74,7 +72,10 @@ Page({
       title: "loading",
       icon: "loading"
     })
-  }
+  },
+   onPullDownRefresh() {
+    console.log("下拉刷新")
+  },
 
 
   //事件处理函数

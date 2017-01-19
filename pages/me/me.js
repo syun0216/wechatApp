@@ -85,6 +85,22 @@ Page({
             path: '/page/index/index'
         }
     },
+    gotologin() {
+        wx.getStorage({
+            key: 'userInfo',
+            success: function (res) {
+                wx.showToast({
+                    title: "您已经绑定手机号了"
+                })
+
+            },
+            fail: function () {
+                wx.navigateTo({
+                    url: '../login/login'
+                })
+            }
+        })
+    },
     logout() {
         wx.showModal({
             title: "提示",
@@ -93,15 +109,21 @@ Page({
             cancelText: "取消",
             confirmColor: "#ff5858",
             success: function (res) {
-                wx.clearStorage({
-                    key: 'userInfo',
-                    success: function (res) {
-                        wx.showToast({
-                            title: "退出登录成功"
-                        })
-                    }
-                })
-            }
+                if (res.confirm) {
+                    wx.clearStorage({
+                        key: 'userInfo',
+                        success: function (res) {
+                            wx.showToast({
+                                title: "退出登录成功"
+                            })
+                        }
+                    })
+                }
+                else {
+                    return;
+                }
+
+            },
         })
     },
     onLoad() {
