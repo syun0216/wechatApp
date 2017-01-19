@@ -16,23 +16,23 @@ Page({
         })
     },
     saveMyInfo() {
-        wx.setStorage({
-            key: 'userInfo',
-            data: this.data.userInfo,
-            success: function (res) {
-                wx.showToast({
-                    title: "保存用户信息成功"
-                })
-            },
-            fail: function () {
-                wx.showToast({
-                    title: "保存用户信息失败"
-                })
-            },
-            complete: function () {
-                // complete
-            }
-        });
+        // wx.setStorage({
+        //     key: 'userInfo',
+        //     data: this.data.userInfo,
+        //     success: function (res) {
+        //         wx.showToast({
+        //             title: "保存用户信息成功"
+        //         })
+        //     },
+        //     fail: function () {
+        //         wx.showToast({
+        //             title: "保存用户信息失败"
+        //         })
+        //     },
+        //     complete: function () {
+        //         // complete
+        //     }
+        // });
         wx.getStorage({
             key: 'userInfo',
             success: function (res) {
@@ -69,7 +69,7 @@ Page({
                             return null;
                         },
                         fail: function () {
-                            alert("拨打电话失败")
+                            return
                         }
                     })
                 } else {

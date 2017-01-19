@@ -25,15 +25,7 @@ Page({
     showLoading: false,
   },
   onPullDownRefresh() {
-    wx.showToast({
-      title: '正在加载中...'
-    })
-  },
-  onReachBottom() {
-    wx.showToast({
-      title: "loading more , please wait",
-      icon: "loading"
-    })
+    console.log("下拉刷新")
   },
   getLocation() {
     wx.getLocation({

@@ -5,10 +5,10 @@
       <view class="weui-label">手机号</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入手机号" bindinput="smsCodeInput"/>
+      <input class="weui-input" placeholder="请输入手机号" bindinput="smsCodeInput" maxlength="11"/>
     </view>
     <view class="weui-cell__ft" >
-      <view class="weui-vcode-btn" bingtap="getSmsCode">获取验证码</view>
+      <view class="weui-vcode-btn {{isDisabled ? 'loginBtnDisabled': null}}" bindtap="getSmsCode">{{btnSend}}</view>
     </view>
   </view>
   <view class="weui-cell weui-cell_input">
@@ -16,10 +16,11 @@
       <view class="weui-label">验证码</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入验证码" />
+      <input class="weui-input" placeholder="请输入验证码" bindinput="receiveSmsCode" maxlength="6"/>
     </view>
   </view>
 </view>
+<view class="marginBottom-50"/>
 <view class="weui-btn-area">
   <button class="weui-btn" type="primary" bindtap="login">确定</button>
 </view>
