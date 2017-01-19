@@ -1,7 +1,7 @@
 <view>
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
     <swiper-item style="background:{{item.bgColor}}" wx:for="{{swiperData}}" wx:key="{{index}}">
-      <image src="{{ item.name}}" mode="scaleToFill"/>
+      <image src="{{ item.name}}" mode="aspectFill"/>
     </swiper-item>
   </swiper>
   <view>
